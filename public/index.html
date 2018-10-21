@@ -1,12 +1,126 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <title>Formulario</title>
 </head>
 <body>
-  
+  <section id="bloque">
+    <header>
+      <h1>Por favor llena los siguientes espacios</h1>
+    </header>
+    <form action="">
+        <h2>Informacion Personal</h2>
+        <h3>Nombre(s)</h3>
+        <div id="name" class="inside">
+          <input type="text" id="nombre">
+        </div>
+        <h3>Apellido Paterno</h3>
+        <div id="ap" class="inside">
+          <input type="text" id="apaterno">
+        </div>
+        <h3>Apellido Materno</h3>
+        <div id="am" class="inside">
+          <input type="text" id="amaterno">
+        </div>
+        <h3>Edad</h3>
+        <div id="age" class="inside">
+          <input type="text" id="edad">
+        </div>
+        <h2>Dirección</h2>
+        <h3>Calle</h3>
+        <div id="street" class="inside">
+          <input type="text" id="calle">
+        </div>
+        <h3>Colonia</h3>
+        <div id="col" class="inside">
+          <input type="text" id="colonia">
+        </div>
+        <h3>Delegación</h3>
+        <div id="dele" class="inside">
+          <input type="text" id="delegacion">
+        </div>
+        <h3>Codigo Postal</h3>
+        <div id="cp" class="inside">
+          <input type="text" id="codigo">
+        </div>
+        <h3>Estado Civil</h3>
+        <div id="estado" class="inside">
+          <input type="checkbox" name="" id="soltero">Soltero
+          <input type="checkbox" name="" id="casado">Casado
+        </div>
+        <h3>¿Tiene Hijos?</h3>
+        <div id="sons" class="inside">
+          <input type="checkbox" name="" id="si">Si :(
+          <input type="checkbox" name="" id="no">No :)
+        </div>
+        <h3>Escolaridad</h3>
+        <div id="school" class="inside">
+        <select name="Escolaridad" id="escolaridad">
+          <option value="">...</option>
+          <option value="">Secundaria</option>
+          <option value="">Bachillerato</option>
+          <option value="">Licenciatura</option>
+        </select>
+        </div>
+        <h3>¿Cuenta con algun tatuaje?</h3>
+        <div class="inside">
+          <input type="checkbox" name="" id="si">Si
+          <input type="checkbox" name="" id="no">No
+        </div>
+        <h2>Información Laboral</h2>
+        <h3>¿Cual fue su ultimo trabajo?</h3>
+        <div class="inside">
+          <input type="text" placeholder="Empresa" id="empresa">
+          <input type="text" placeholder="Puesto" id="puesto">
+          <input type="text" placeholder="¿Cuanto duro?" id="tiempo">
+        </div>
+        <h3>Referencias Laborales</h3>
+        <div id="ref1" class="inside">
+          <input type="text" placeholder="Nombre">
+          <input type="text" placeholder="Telefono">
+          <input type="text" placeholder="Ocupacion">
+        </div>
+        <div id="ref2" class="inside">
+            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Telefono">
+            <input type="text" placeholder="Ocupacion">
+        </div>
+        <div id="ref3" class="inside">
+            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Telefono">
+            <input type="text" placeholder="Ocupacion">
+        </div>
+        <h3>¿Tiene experiencia en ventas de mostrador?</h3>
+        <div class="inside">
+          <input type="checkbox" name="" id="si">Si
+          <input type="checkbox" name="" id="si">No
+        </div>
+        <h3>¿Tiene experiencia en atencion al cliente?</h3>
+        <div class="inside">
+          <input type="checkbox" name="" id="si">Si
+          <input type="checkbox" name="" id="si">No
+        </div>
+        <h3>Disponibilidad de Horario</h3>
+        <div class="inside">
+          <input type="checkbox" name="" id="si">Matutino
+          <input type="checkbox" name="" id="si">Vespertino
+        </div>
+        <h3>Curriculum</h3>
+        <div class="inside">
+          <input type="file" name="cv" id="cv">
+        </div>
+        <h3>INE</h3>
+        <div class="inside">
+          <input type="file" name="" id="ine">
+        </div>
+        <div id="button">
+          <input type="button" value="ENVIAR" id="enviar">
+        </div>
+    </form>
+  </section>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
 </body>
 </html>
