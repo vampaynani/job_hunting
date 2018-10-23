@@ -7,131 +7,122 @@
   <title>Formulario</title>
 </head>
 <body>
-  <section id="bloque">
-    <header>
-      <h1>Formulario de Reclutamiento</h1>
-    </header>
-    <section class="descripcion">
-      <article>
-        Porfavor llena los siguientes espacios con la información solicitada.
-      </article>
-    </section>
     <form action="">
-        <h2>Informacion Personal</h2>
-        <h3>Nombre(s)</h3>
-        <div id="name" class="inside">
-          <input type="text" id="nombre">
+      <header>
+        <h2>Formulario De Reclutamiento</h2>
+      </header>
+      <section>
+        <h3>Nombre</h3>
+        <input placeholder="Escribir" type="text" id="nombre" class="text">
+      </section>
+      <section>
+          <h3>Apellido Paterno</h3>
+          <input placeholder="Escribir" type="text" id="paterno" class="text">
+      </section>
+      <section>
+          <h3>Apellido Materno</h3>
+          <input placeholder="Escribir" type="text" id="materno" class="text">
+      </section>
+      <section>
+          <h3>Calle</h3>
+          <input placeholder="Escribir" type="text" id="calle" class="text">
+      </section>
+      <section>
+          <h3>Colonia</h3>
+          <input placeholder="Escribir" type="text" id="colonia" class="text">
+      </section>
+      <section>
+          <h3>Delegación</h3>
+          <input placeholder="Escribir" type="text" id="delegacion" class="text">
+      </section>
+      <section>
+          <h3>Código Postal</h3>
+          <input placeholder="Escribir" type="text" id="cp" class="text">
+      </section>
+      <section>
+          <h3>Edad</h3>
+          <input placeholder="Escribir" type="text" id="edad" class="text">
+      </section>
+      <section>
+          <h3>*Estado Civil</h3>
+          <input placeholder="Escribir" type="text" id="civil" class="text">
+      </section>
+      <section>
+          <h3>*¿Tiene Hijos?</h3>
+          <input placeholder="Escribir" type="text" id="hijos" class="text">
+      </section>
+      <section>
+          <h3>Ultimo grado de estudios</h3>
+          <input placeholder="Escribir" type="text" id="esudios" class="text">
+      </section>
+      <section>
+          <h3>¿Cuenta con algun tatuaje?</h3>
+          <input placeholder="Escribir" type="text" id="tatuaje" class="text">
+      </section>
+      <section id="job">
+        <h2>Ultimo trabajo</h2>
+          <div class="b1">
+              <h3>Nombre de la Empresa</h3>
+              <input placeholder="Escribir" type="text" id="empresa" class="text">
+              <h3>Motivo de Separación</h3>
+          <input placeholder="Escribir" type="text" id="separacion" class="text">
+          </div>
+          <div class="b2">
+              <h3>Puesto Desempeñado</h3>
+              <input placeholder="Escribir" type="text" id="puesto" class="text">
+              <h3>Tiempo Laborado</h3>
+          <input placeholder="Escribir" type="text" id="tiempo" class="text">
+          </div>
+      </section>
+      <section id="ref">
+        <h2>Referencias Laborales</h2>
+        <div class="sunombre">
+          <input type="text" placeholder="Nombre" class="text">
+          <input type="text" placeholder="Nombre" class="text">
+          <input type="text" placeholder="Nombre" class="text">
         </div>
-        <h3>Apellido Paterno</h3>
-        <div id="ap" class="inside">
-          <input type="text" id="apaterno">
+        <div class="numero">
+            <input type="text" placeholder="Numero de Telefono" class="text">
+            <input type="text" placeholder="Numero de Telefono" class="text">
+            <input type="text" placeholder="Numero de Telefono" class="text">
         </div>
-        <h3>Apellido Materno</h3>
-        <div id="am" class="inside">
-          <input type="text" id="amaterno">
+        <div class="ocupacion">
+            <input type="text" placeholder="Ocupación" class="text">
+            <input type="text" placeholder="Ocupación" class="text">
+            <input type="text" placeholder="Ocupación" class="text">
         </div>
-        <h3>Edad</h3>
-        <div id="age" class="inside">
-          <input type="text" id="edad">
+      </section>
+      <section>
+          <h3>¿Tiene Experiencia en Ventas de Mostrador?</h3>
+          <input placeholder="Escribir" type="text" id="exp-mostrador" class="text">
+      </section>
+      <section>
+          <h3>¿Tiene Experiencia en Atención al Cliente?</h3>
+          <input placeholder="Escribir" type="text" id="exp-atc" class="text">
+      </section>
+      <section>
+          <h3>¿Cual es su Disponibilidad de Horario?</h3>
+          <input placeholder="Escribir" type="text" id="horario" class="text" class="text">
+      </section>
+      <section id="files">
+        <h3>Por favor anexe los documentos solicitados</h3>
+        <div class="b1">
+          <h4>Curriculum</h4>
+          <input type="file" name="" id="">
         </div>
-        <h2>Dirección</h2>
-        <h3>Calle</h3>
-        <div id="street" class="inside">
-          <input type="text" id="calle">
+        <div class="b2">
+            <h4>INE</h4>
+            <input type="file" name="" id="">
         </div>
-        <h3>Colonia</h3>
-        <div id="col" class="inside">
-          <input type="text" id="colonia">
+      </section>
+      <section class="end">
+        <div>
+          <input type="button" value="Send" id="boton">
         </div>
-        <h3>Delegación</h3>
-        <div id="dele" class="inside">
-          <input type="text" id="delegacion">
-        </div>
-        <h3>Codigo Postal</h3>
-        <div id="cp" class="inside">
-          <input type="text" id="codigo">
-        </div>
-        <h3>Estado Civil</h3>
-        <div id="estado" class="inside">
-          <input type="checkbox" name="" id="soltero">Soltero
-          <input type="checkbox" name="" id="casado">Casado
-        </div>
-        <h3>¿Tiene Hijos?</h3>
-        <div id="sons" class="inside">
-          <input type="checkbox" name="" id="si">Si :(
-          <input type="checkbox" name="" id="no">No :)
-        </div>
-        <h3>Escolaridad</h3>
-        <div id="school" class="inside">
-        <select name="Escolaridad" id="escolaridad">
-          <option value="">...</option>
-          <option value="">Secundaria</option>
-          <option value="">Bachillerato</option>
-          <option value="">Licenciatura</option>
-        </select>
-        </div>
-        <h3>¿Cuenta con algun tatuaje?</h3>
-        <div class="inside">
-          <input type="checkbox" name="" id="si">Si
-          <input type="checkbox" name="" id="no">No
-        </div>
-        <h2>Información Laboral</h2>
-        <h3>¿Cual fue su ultimo trabajo?</h3>
-        <div class="inside">
-          <input type="text" placeholder="Empresa" id="empresa">
-          <input type="text" placeholder="Puesto" id="puesto">
-          <input type="text" placeholder="Tiempo Laborado" id="tiempo">
-        </div>
-        <h3>Referencias Laborales</h3>
-        <div id="ref1" class="inside">
-          <input type="text" placeholder="Nombre">
-          <input type="text" placeholder="Telefono">
-          <input type="text" placeholder="Ocupacion">
-        </div>
-        <div id="ref2" class="inside">
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Telefono">
-            <input type="text" placeholder="Ocupacion">
-        </div>
-        <div id="ref3" class="inside">
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="Telefono">
-            <input type="text" placeholder="Ocupacion">
-        </div>
-        <h3>¿Tiene experiencia en ventas de mostrador?</h3>
-        <div class="inside">
-          <input type="checkbox" name="" id="si">Si
-          <input type="checkbox" name="" id="si">No
-        </div>
-        <h3>¿Tiene experiencia en atencion al cliente?</h3>
-        <div class="inside">
-          <input type="checkbox" name="" id="si">Si
-          <input type="checkbox" name="" id="si">No
-        </div>
-        <h3>Disponibilidad de Horario</h3>
-        <div class="inside">
-          <input type="checkbox" name="" id="si">Matutino
-          <input type="checkbox" name="" id="si">Vespertino
-        </div>
-        <h3>Curriculum</h3>
-        <div class="inside">
-          <input type="file" name="cv" id="cv">
-        </div>
-        <h3>INE</h3>
-        <div class="inside">
-          <input type="file" name="" id="ine">
-        </div>
-        <div id="button">
-          <input type="button" value="ENVIAR" id="enviar">
-        </div>
+      </section>
     </form>
-  </section>
-  <section id="bloque2">
-    <h1>¡Gracias!</h1>
-    <article>
-      Pronto nos pondremos en contacto contigo.
-    </article>
-  </section>
+  <script src="scripts/app.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
 </body>
 </html>
