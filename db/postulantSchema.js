@@ -17,7 +17,7 @@ const postulantSchema = mongoose.Schema({
     separacion:{type:String},
     puesto:{type:String},
     tiempo:{type:String},
-    referencias = [{
+    referencias:[{
         nombre:{type:String},
         numero:{type:String},
         ocupacion:{type:String},
@@ -57,6 +57,6 @@ const postulantSchema = mongoose.Schema({
     created: {type:Date, default:Date.now}
 });
 
-const postulantSchema = mongoose.model('postulantSchema', postulantSchema);
+const postulante = mongoose.model('postulantSchema', postulantSchema);
 
-module.exports = postulantSchema;
+module.exports = postulante;
