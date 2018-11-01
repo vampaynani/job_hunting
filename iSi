@@ -1,0 +1,71 @@
+[33mcommit 2fd8cb2cbbd439b2136ef241c62764c247843c05[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: cesar <cesarlunalimon@gmail.com>
+Date:   Sun Oct 28 20:08:24 2018 -0600
+
+    db schema & index.js methods
+
+[33mcommit 6fa7b1772636a39fd93fc3f7c6505cebf12c16e9[m
+Author: Wenceslao Negrete <vampay@digitaldealers.mx>
+Date:   Wed Oct 24 21:07:02 2018 -0500
+
+    uploader module
+
+[33mcommit 90321b2bed8331afceca61ae59a7ab4664077154[m
+Author: Wenceslao Negrete <vampay@digitaldealers.mx>
+Date:   Wed Oct 24 20:32:53 2018 -0500
+
+    Added api file
+
+[33mcommit 6206b91965c4b66a9147eddb15ecec97cc312a8d[m
+Author: irontrooper7 <gustavolunalimon@gmail.com>
+Date:   Wed Oct 24 20:20:03 2018 -0500
+
+    terminando animacion
+
+[33mcommit ca5236d47e27bd9ddc24ad1cdaa5d631343488c7[m
+Author: irontrooper7 <gustavolunalimon@gmail.com>
+Date:   Tue Oct 23 20:28:51 2018 -0500
+
+    :)
+
+[33mcommit 15177664282cbc5815b856a7f21694c867fbe464[m
+Author: irontrooper7 <gustavolunalimon@gmail.com>
+Date:   Tue Oct 23 03:48:46 2018 -0500
+
+    animacion incluida, faltan ajustar detalles
+
+[33mcommit 551984d047c9f3befd77878b57d75d898e38911e[m
+Author: irontrooper7 <gustavolunalimon@gmail.com>
+Date:   Tue Oct 23 03:17:26 2018 -0500
+
+    diseño mejorado
+
+[33mcommit a5827647423ad7e357a0c91e90bc960b4d0136d3[m
+Author: irontrooper7 <gustavolunalimon@gmail.com>
+Date:   Mon Oct 22 16:34:41 2018 -0500
+
+    mejoras echas, en espera de retroalimentacion
+
+[33mcommit 8bad63bd243bb3abce8007acd3cc9c34ebad54a2[m
+Author: irontrooper7 <gustavolunalimon@gmail.com>
+Date:   Mon Oct 22 14:59:10 2018 -0500
+
+    mejoras del diseño
+
+[33mcommit e5d8755862a71c8d851bcc39476c40e9d7a59845[m
+Author: irontrooper7 <gustavolunalimon@gmail.com>
+Date:   Sun Oct 21 15:50:55 2018 -0500
+
+    11
+
+[33mcommit 0cf8a4438ea719302e0960aea9500337866eb896[m
+Author: Wenceslao Negrete <vampay@digitaldealers.mx>
+Date:   Sat Oct 20 11:45:14 2018 -0500
+
+    Initial commit
+
+[33mcommit 1d6185f4942f31409a20249c35a03fb8652cbbcf[m
+Author: Wenceslao Negrete <vampay@digitaldealers.mx>
+Date:   Sat Oct 20 11:41:34 2018 -0500
+
+    Initial commit
