@@ -20,6 +20,6 @@ function initializate(){
     send.addEventListener('click', function(e){
         e.preventDefault(e);
 
-
+        
     })
 }
