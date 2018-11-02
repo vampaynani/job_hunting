@@ -82,7 +82,7 @@ app.delete('/postulantes/user/:id', function(req, res){
 
 mongoose.connect('mongodb://Grimmgalohm:goldenrenamon1@ds127293.mlab.com:27293/coderoomdb', err=>{
     if(err){
-    console.log('Something goes wrong, do not panic, keep calm and blame it on the boogie');
+    console.log('Something goes wrong, DO NOT PANIC, keep calm and blame it on the boogie');
     }
 })
 
