@@ -10,7 +10,7 @@ const postulantSchema = mongoose.Schema({
     cp:{type:Number},
     edad:{type:Number},
     civil:{type:String},
-    hijos:{type:String},
+    hijos:{type:Boolean},
     estudios:{type:String},
     tatuaje:{type:Boolean},
     empresa:{type:String},
