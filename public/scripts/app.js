@@ -20,7 +20,7 @@ function initializate(){
     send.addEventListener('click', function(e){
         e.preventDefault(e);
 
-        var inputnombre = this.nombre.value;
+        var inputnombre = this.nombre.value,
         var inputpaterno = this.paterno.value;
         var inputmaterno = this.materno.value;
         
@@ -82,6 +82,39 @@ function initializate(){
 
         var inputcv = this.cv.value;
         var inputine = this.ine.value;
+
+        var Data = this.formulario.value;
+
+        function Data ( 
+            inputnombre,
+            inputpaterno,
+            inputmaterno,
+            inputcalle,
+            inputcolonia,
+            inputdelegacion,
+            inputcp,
+            inputedad,
+            inputestado,
+            inputhijos,
+            inputestudio,
+            inputtatuaje,
+            inputempresa,
+            inputseparacion,
+            inputpuesto,
+            inputtiempo,
+            inputnombre1,
+            inputnombre2,
+            inputnombre3,
+            inputtel1,
+            inputtel2,
+            inputtel3,
+            inputocupacion1,
+            inputocupacion2,
+            inputocupacion3,
+            
+            ){
+
+        }
 
         api.submitForm(Data);
         
