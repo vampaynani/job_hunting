@@ -75,7 +75,7 @@ function initializate(){
         var inputviernesv = this.viernesv.value;
 
         var inputsabadom = this.sabadom.value;
-        var inputlsabadov = this.sabadov.value;
+        var inputsabadov = this.sabadov.value;
 
         var inputdomingom = this.domingom.value;
         var inputdomingov = this.domingov.value;
@@ -111,7 +111,24 @@ function initializate(){
             inputocupacion1,
             inputocupacion2,
             inputocupacion3,
-            
+            inputexpv,
+            inputexpatc,
+            inputlunesm,
+            inputlunesv,
+            inputmartesm,
+            inputmartesv,
+            inputmiercolesm,
+            inputmiercolesv,
+            inputjuevesm,
+            inputjuevesv,
+            inputviernesm,
+            inputviernesv,
+            inputsabadom,
+            inputsabadov,
+            inputdomingom,
+            inputdomingov,
+            inputcv,
+            inputine,
             ){
 
         }
