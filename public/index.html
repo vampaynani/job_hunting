@@ -8,7 +8,7 @@
   <title>Formulario</title>
 </head>
 <body>
-    <form name="formulario">
+    <form id="formulario">
       <header class="txt">
         <h2>Formulario De Reclutamiento</h2>
       </header>
@@ -47,21 +47,21 @@
       <section id="estado">
           <h3>Estado Civil</h3>
           <ul>
-              <li><input type="radio" name="estado" value="Soltero"><span>Soltero(a)</span></li>
-              <li><input type="radio" name="estado" value="Casado"><span>Casado(a)</span></li>
-              <li><input type="radio" name="estado" value="Divorciado"><span>Divorciado(a)</span></li>
+              <li><input type="radio" name="estado" value="Soltero" required><span>Soltero(a)</span></li>
+              <li><input type="radio" name="estado" value="Casado" required><span>Casado(a)</span></li>
+              <li><input type="radio" name="estado" value="Divorciado" required><span>Divorciado(a)</span></li>
           </ul>
       </section>
       <section class="txt">
           <h3>¿Tiene Hijos?</h3>
           <div class="sn">
-            <input type="radio" name="hijos" value="si">Si
-            <input type="radio" name="hijos" value="no">No
+            <input type="radio" name="hijos" value="si" required>Si
+            <input type="radio" name="hijos" value="no" required>No
           </div>
       </section>
       <section class="txt">
           <h3>Ultimo grado de estudios</h3>
-          <select name="estudio" id="estudio">
+          <select name="estudio" id="estudio" required>
             <option>Seleccione Una Opción</option>
             <option value="secundaria">Secundaria</option>
             <option value="preparatoria">Preparatoria</option>
@@ -71,8 +71,8 @@
       <section class="txt">
           <h3>¿Cuenta con algun tatuaje?</h3>
           <div class="sn">
-            <input type="radio" name="tatuaje" value="si">Si
-            <input type="radio" name="tatuaje" value="no">No
+            <input type="radio" name="tatuaje" value="si" required>Si
+            <input type="radio" name="tatuaje" value="no" required>No
           </div>
       </section>
       <section id="job" class="txt">
@@ -111,15 +111,15 @@
       <section class="txt">
           <h3>¿Tiene Experiencia en Ventas de Mostrador?</h3>
           <div class="sn">
-            <input type="radio" name="ventas" value="si">Si
-            <input type="radio" name="ventas" value="no">No
+            <input type="radio" name="ventas" value="si" required>Si
+            <input type="radio" name="ventas" value="no" required>No
           </div>
       </section>
       <section class="txt">
           <h3>¿Tiene Experiencia en Atención al Cliente?</h3>
           <div class="sn">
-            <input type="radio" name="atc" value="si">Si
-            <input type="radio" name="atc" value="no">No
+            <input type="radio" name="atc" value="si" required>Si
+            <input type="radio" name="atc" value="no" required>No
           </div>
       </section>
       <section class="txt">
@@ -135,22 +135,22 @@
                   <div><h3>Domingo</h3></div>
               </section>
               <section id="m">
-                  <div><input type="checkbox" name="lunesm" value="matutino"><span>8:00 a 16:00</span></div>
-                  <div><input type="checkbox" name="martesm" value="matutino"><span>8:00 a 16:00</span></div>
-                  <div><input type="checkbox" name="miercolesm" value="matutino"><span>8:00 a 16:00</span></div>
-                  <div><input type="checkbox" name="juevesm" value="matutino"><span>8:00 a 16:00</span></div>
-                  <div><input type="checkbox" name="viernesm" value="matutino"><span>8:00 a 16:00</span></div>
-                  <div><input type="checkbox" name="sabadom" value="matutino"><span>8:00 a 16:00</span></div>
-                  <div><input type="checkbox" name="domingom" value="matutino"><span>8:00 a 16:00</span></div>
+                  <div><input type="checkbox" name="lunesm" value="matutino" required><span>8:00 a 16:00</span></div>
+                  <div><input type="checkbox" name="martesm" value="matutino" required><span>8:00 a 16:00</span></div>
+                  <div><input type="checkbox" name="miercolesm" value="matutino" required><span>8:00 a 16:00</span></div>
+                  <div><input type="checkbox" name="juevesm" value="matutino" required><span>8:00 a 16:00</span></div>
+                  <div><input type="checkbox" name="viernesm" value="matutino" required><span>8:00 a 16:00</span></div>
+                  <div><input type="checkbox" name="sabadom" value="matutino" required><span>8:00 a 16:00</span></div>
+                  <div><input type="checkbox" name="domingom" value="matutino" required><span>8:00 a 16:00</span></div>
               </section>
               <section id="l">
-                    <div><input type="checkbox" name="lunesv" value="vespertino"><span>14:00 a 22:00</span></div>
-                    <div><input type="checkbox" name="martesv" value="vespertino"><span>14:00 a 22:00</span></div>
-                    <div><input type="checkbox" name="miercolesv" value="vespertino"><span>14:00 a 22:00</span></div>
-                    <div><input type="checkbox" name="juevesv" value="vespertino"><span>14:00 a 22:00</span></div>
-                    <div><input type="checkbox" name="viernesv" value="vespertino"><span>14:00 a 22:00</span></div>
-                    <div><input type="checkbox" name="sabadov" value="vespertino"><span>14:00 a 22:00</span></div>
-                    <div><input type="checkbox" name="domingov" value="vespertino"><span>14:00 a 22:00</span></div>
+                    <div><input type="checkbox" name="lunesv" value="vespertino" required><span>14:00 a 22:00</span></div>
+                    <div><input type="checkbox" name="martesv" value="vespertino" required><span>14:00 a 22:00</span></div>
+                    <div><input type="checkbox" name="miercolesv" value="vespertino" required><span>14:00 a 22:00</span></div>
+                    <div><input type="checkbox" name="juevesv" value="vespertino" required><span>14:00 a 22:00</span></div>
+                    <div><input type="checkbox" name="viernesv" value="vespertino" required><span>14:00 a 22:00</span></div>
+                    <div><input type="checkbox" name="sabadov" value="vespertino" required><span>14:00 a 22:00</span></div>
+                    <div><input type="checkbox" name="domingov" value="vespertino" required><span>14:00 a 22:00</span></div>
               </section>
           </section>
       </section>
