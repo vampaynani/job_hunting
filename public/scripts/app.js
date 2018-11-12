@@ -21,7 +21,9 @@ function initializate(){
         e.preventDefault(e);
         console.log('enviando')
 
-
+        //var form = document.querySelector("#formulario");
+        //form.nombre.value;
+        
         var inputnombre = document.getElementsByName('nombre')[0].value;
         var inputpaterno = document.getElementsByName('paterno')[0].value;
         var inputmaterno = document.getElementsByName('materno')[0].value;

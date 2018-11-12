@@ -1,7 +1,7 @@
 const api = (function(){
   const baseUrl = 'http://localhost:8080';
-  function submitForm(){
-    return fetch(`${baseUrl}/api/users`,{
+  function submitForm(id){
+    return fetch(`${baseUrl}/api/users/${id}`,{
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -17,3 +17,7 @@ const api = (function(){
     submitForm
   }
 });
+
+
+// crea una funcion de Get
+// botones para eliminar y actualizar los registros
