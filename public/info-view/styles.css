@@ -52,7 +52,7 @@ tr:hover td{
 }
 
 #bote{
-    font-size: 40px;
+    font-size: 35px;
     cursor: pointer;
     transition: .2s ease-in;
 }
