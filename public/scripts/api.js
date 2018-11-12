@@ -1,7 +1,7 @@
 const api = (function(){
   const baseUrl = 'http://localhost:8080';
   function submitForm(id){
-    return fetch(`${baseUrl}/api/users/${id}`,{
+    return fetch(`${baseUrl}/postulantes/users/${id}`,{
       method: 'POST',
       headers: {
         Accept: 'application/json',
