@@ -17,7 +17,7 @@ fetch('http://localhost:3000/postulantes/users')
 function render(){
     var userTable = _users.map(user =>{
         return `<tr>
-        <td>${user.nombre+', '+user.paterno+', '+user.materno}</td>
+        <td>${user.nombre+' '+user.paterno+' '+user.materno}</td>
         <td>${user.edad}</td>
         <td>${user.calle+', '+user.colonia+', '+user.delegacion+', '+user.cp}</td>
         <td>${user.civil}</td>
@@ -26,6 +26,9 @@ function render(){
         <td>${user.tatuajes}</td>
         <td>${user.exp_ventas}</td>
         <td>${user.exp_atc}</td>
+        <!--<td><label for="borrar"><ion-icon id="bote" name="trash"></ion-icon></label></td>
+        <td id="borrar" class="del"><input type="button" placeholder="Delete" value="delete"></td>-->
+        <td><button data-userid=${user._id}>Borrar</button></td>
         </tr>`
     })
     userTable.unshift(`
@@ -42,6 +45,7 @@ function render(){
     <th>Exp. ATC</th>
     <th>CV</th>
     <th>INE</th>
+    <th></th>
     </tr>
     </thead>`);
 
@@ -49,30 +53,25 @@ function render(){
     tabla.innerHTML = userTable.join('');
 }
 
-/*
-const tabla = document.querySelector('#tabla');
+const tabla = document.querySelector('#tabla');//selecciona de html el elemento con id="tabla"
 tabla.addEventListener('click', function(e){
     e.preventDefault();
-    //console.log('Click', e.currentTarget, e.target, e.target.innerHTML);
-    if(e.target.innerHTML.trim() === "Borrar"){
-        //console.log('Este es el bueno');
-        //console.log(e.target.dataset.userid);
 
+    if(e.target.innerHTML.trim() === "Borrar"){
         var uid = e.target.dataset.userid;
-        
-        fetch(`http://localhost:8080/api/users/${uid}`,{
+
+        fetch(`http://localhost:3000/postulantes/user/${uid}`,{
             method: 'DELETE',
-            headers: {
-            'Accept': 'application/json',
-            'Content-Type':'application/json'
-        }
-    }).then(response =>{
-        if(!response.ok){
-            return Promise.reject(response.json());
-        }
-       _users = _users.filter(user => user._id !== uid);
-        render();
-    }).catch(error => console.log(error));
-}
+            headers:{
+                'Accept': 'application/json',
+                'Content-type': 'application/json'
+            }
+        }).then(response=>{
+            if(!response.ok){
+                return Promise.reject(response.json());
+            }
+            _users = _users.filter(user=> user._id !== uid);
+            render();
+        }).catch(error=>console.log(error));
+    }
 });
-*/
