@@ -1,3 +1,5 @@
+var create = document.querySelector('form');
+
 window.onload=(function(){
     initializate();
 })();
@@ -15,125 +17,126 @@ function initializate(){
         TweenLite.to(bloque1,.5,{top: "-100%", display: "none"});
         TweenLite.set(bloque2,{top: "-100%", display: "none", delay: .5});
         TweenLite.to(bloque2,.5,{top:"0%", display: "block", delay: 1.5});
+
+        pack();
     });
+}
 
-    send.addEventListener('click', function(e){
-        e.preventDefault(e);
-        console.log('enviando')
 
-        //var form = document.querySelector("#formulario");
-        //form.nombre.value;
-        
-        var inputnombre = document.getElementsByName('nombre')[0].value;
-        var inputpaterno = document.getElementsByName('paterno')[0].value;
-        var inputmaterno = document.getElementsByName('materno')[0].value;
-        
-        var inputcalle = document.getElementsByName('calle')[0].value;
-        var inputcolonia = document.getElementsByName('colonia')[0].value;
-        var inputdelegacion = document.getElementsByName('delegacion')[0].value;
-        var inputcp = document.getElementsByName('cp')[0].value;
-        
-        var inputedad = document.getElementsByName('edad')[0].value;
-        
-        var inputestado = document.getElementsByName('estado')[0].value;
-        
-        var inputhijos = document.getElementsByName('hijos')[0].value;
-        
-        var inputestudio = document.getElementsByName('estudio')[0].value;
+function pack(){
+    
+    var nombre = create.nombre.value;
+    var paterno = create.paterno.value;
+    var materno = create.materno.value;
 
-        var inputtatuaje = document.getElementsByName('tatuaje')[0].value;
+    var calle = create.calle.value;
+    var colonia = create.colonia.value;
+    var delegacion = create.delegacion.value;
+    var cp = create.cp.value;
+    
+    var edad = create.edad.value;
+    
+    var civil = create.estado.value;
+    
+    var hijos = create.hijos.value;
+    
+    var estudios = create.estudio.value;
 
-        var inputempresa = document.getElementsByName('empresa')[0].value;
-        var inputseparacion = document.getElementsByName('separacion')[0].value;
-        var inputpuesto = document.getElementsByName('puesto')[0].value;
-        var inputtiempo = document.getElementsByName('tiempo')[0].value;
+    var tatuajes = create.tatuaje.value;
 
-        var inputnombre1 = document.getElementsByName('nombre1')[0].value;
-        var inputnombre2 = document.getElementsByName('nombre2')[0].value;
-        var inputnombre3 = document.getElementsByName('nombre3')[0].value;
+    var empresa = create.empresa.value;
+    var separacion = create.separacion.value;
+    var puesto = create.puesto.value;
+    var tiempo = create.tiempo.value;
 
-        var inputtel1 = document.getElementsByName('tel1')[0].value;
-        var inputtel2 = document.getElementsByName('tel2')[0].value;
-        var inputtel3 = document.getElementsByName('tel3')[0].value;
+    var referencias = [{
+        nombre: create.nombre1.value,
+        numero: create.tel1.value,
+        ocupacion: create.ocupacion1.value,
+    },{
+        nombre: create.nombre2.value,
+        numero: create.tel2.value,
+        ocupacion: create.ocupacion3.value,
+    },{
+        nombre: create.nombre3.value,
+        numero: create.tel3.value,
+        ocupacion: create.ocupacion3.value,
+    }]
 
-        var inputocupacion1 = document.getElementsByName('ocupacion1')[0].value;
-        var inputocupacion2 = document.getElementsByName('ocupacion1')[0].value;
-        var inputocupacion3 = document.getElementsByName('ocupacion1')[0].value;
+    var exp_mostrador = create.ventas.value;
+    var exp_atc = create.atc.value;
 
-        var inputexpv = document.getElementsByName('expv')[0].value;
-        var inputexpatc = document.getElementsByName('expatc')[0].value;
-
-        var inputlunesm = document.getElementsByName('lunesm')[0].value;
-        var inputlunesv = document.getElementsByName('lunesv')[0].value;
-
-        var inputmartesm = document.getElementsByName('martesm')[0].value;
-        var inputmartesv = document.getElementsByName('martesv')[0].value;
-
-        var inputmiercolesm = document.getElementsByName('miercolesm')[0].value;
-        var inputmiercolesv = document.getElementsByName('miercolesv')[0].value;
-
-        var inputjuevesm = document.getElementsByName('juevesm')[0].value;
-        var inputjuevesv = document.getElementsByName('juevesv')[0].value;
-
-        var inputviernesm = document.getElementsByName('viernesm')[0].value;
-        var inputviernesv = document.getElementsByName('viernesv')[0].value;
-
-        var inputsabadom = document.getElementsByName('sabadom')[0].value;
-        var inputsabadov = document.getElementsByName('sabadov')[0].value;
-
-        var inputdomingom = document.getElementsByName('domingom')[0].value;
-        var inputdomingov = document.getElementsByName('domingov')[0].value;
-
-        var inputcv = document.getElementsByName('cv')[0].value;
-        var inputine = document.getElementsByName('ine')[0].value;
-
-        const Data = {
-            inputnombre,
-            inputpaterno,
-            inputmaterno,
-            inputcalle,
-            inputcolonia,
-            inputdelegacion,
-            inputcp,
-            inputedad,
-            inputestado,
-            inputhijos,
-            inputestudio,
-            inputtatuaje,
-            inputempresa,
-            inputseparacion,
-            inputpuesto,
-            inputtiempo,
-            inputnombre1,
-            inputnombre2,
-            inputnombre3,
-            inputtel1,
-            inputtel2,
-            inputtel3,
-            inputocupacion1,
-            inputocupacion2,
-            inputocupacion3,
-            inputexpv,
-            inputexpatc,
-            inputlunesm,
-            inputlunesv,
-            inputmartesm,
-            inputmartesv,
-            inputmiercolesm,
-            inputmiercolesv,
-            inputjuevesm,
-            inputjuevesv,
-            inputviernesm,
-            inputviernesv,
-            inputsabadom,
-            inputsabadov,
-            inputdomingom,
-            inputdomingov,
-            inputcv,
-            inputine,
+    var disponibilidad = {
+        Lunes: {
+            matutino: document.getElementsByName('lunesm')[0].value,
+            vespertino: document.getElementsByName('lunesv')[0].value
+        },
+        Martes: {
+            matutino: document.getElementsByName('martesm')[0].value,
+            vespertino: document.getElementsByName('martesm')[0].value
+        },
+        Miercoles:{
+            matutino: document.getElementsByName('miercolesm')[0].value,
+            vespertino: document.getElementsByName('miercolesv')[0].value
+        },
+        Jueves:{
+            matutino: document.getElementsByName('juevesm')[0].value,
+            vespertino: document.getElementsByName('juevesv')[0].value
+        },
+        Viernes:{
+            matutino: document.getElementsByName('viernesm')[0].value,
+            vespertino: document.getElementsByName('viernesv')[0].value
+        },
+        Sabado:{
+            matutino: document.getElementsByName('sabadom')[0].value,
+            vespertino: document.getElementsByName('sabadov')[0].value
+        },
+        Domingo:{
+            matutino: document.getElementsByName('domingom')[0].value,
+            vespertino: document.getElementsByName('domingov')[0].value
         }
+    }
 
-        api.submitForm(Data);
-        
+    fetch('http://localhost:3000/postulantes/users', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            nombre,
+            paterno,
+            materno,
+            calle,
+            colonia,
+            delegacion,
+            cp,
+            edad,
+            civil,
+            hijos,
+            estudios,
+            tatuajes,
+            empresa,
+            separacion,
+            puesto,
+            tiempo,
+            referencias,
+            exp_mostrador,
+            exp_atc,
+            disponibilidad,
+        })
     })
+    .then(response =>{
+        if(!response.ok){
+            return Promise.reject(response.json());
+            console.log('fuck!')
+        }
+        return response.json();
+        console.log('hurray!')
+    })
+    .then(user =>{
+        create.reset();
+    })
+    .catch(error=> console.log(error));
+
 }

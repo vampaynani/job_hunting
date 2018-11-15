@@ -10,9 +10,9 @@ const postulantSchema = mongoose.Schema({
     cp:{type:Number},
     edad:{type:Number},
     civil:{type:String},
-    hijos:{type:Boolean},
+    hijos:{type:String},
     estudios:{type:String},
-    tatuaje:{type:Boolean},
+    tatuaje:{type:String},
     empresa:{type:String},
     separacion:{type:String},
     puesto:{type:String},
@@ -22,36 +22,36 @@ const postulantSchema = mongoose.Schema({
         numero:{type:String},
         ocupacion:{type:String},
     }],
-    exp_mostrador:{type:Boolean},
-    exp_atc:{type:Boolean},
+    exp_mostrador:{type:String},
+    exp_atc:{type:String},
     disponibilidad: {
         Lunes: {
-            matutino: Boolean,
-            vespertino: Boolean
+            matutino: String,
+            vespertino: String
         },
         Martes: {
-            matutino: Boolean,
-            vespertino: Boolean
+            matutino: String,
+            vespertino: String
         },
         Miercoles: {
-            matutino: Boolean,
-            vespertino: Boolean
+            matutino: String,
+            vespertino: String
         },
         Jueves:{
-            matutino: Boolean,
-            vespertino: Boolean
+            matutino: String,
+            vespertino: String
         },
         Viernes:{
-            matutino: Boolean,
-            vespertino: Boolean
+            matutino: String,
+            vespertino: String
         },
         Sabado: {
-            matutino: Boolean,
-            vespertino: Boolean
+            matutino: String,
+            vespertino: String
         },
         Domingo: {
-            matutino: Boolean,
-            vespertino: Boolean
+            matutino: String,
+            vespertino: String
         }
     },
     created: {type:Date, default:Date.now}

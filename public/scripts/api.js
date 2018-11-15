@@ -1,3 +1,4 @@
+/*
 const api = (function(){
   const baseUrl = 'http://localhost:8080';
   function submitForm(id){
@@ -17,7 +18,7 @@ const api = (function(){
     submitForm
   }
 });
-
+*/
 
 // crea una funcion de Get
 // botones para eliminar y actualizar los registros
