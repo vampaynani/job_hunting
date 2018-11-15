@@ -45,7 +45,7 @@ function render(){
     <th>Exp. ATC</th>
     <th>CV</th>
     <th>INE</th>
-    <th></th>
+    <th> </th>
     </tr>
     </thead>`);
 
