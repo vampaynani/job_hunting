@@ -137,6 +137,5 @@ function pack(){
     .then(user =>{
         create.reset();
     })
-    .catch(error=> console.log(error));
-    
+    .catch(error=> console.log(error));    
 }
