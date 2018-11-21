@@ -91,12 +91,3 @@ app.listen(PORT, function() {
 }).on('error', err => console.error);
 
 module.exports = app;
-
-
-function checker(){
-  if(document.getElementById("checkbox").checked = true){
-    return true;
-  }else{
-    return false;
-  }
-}

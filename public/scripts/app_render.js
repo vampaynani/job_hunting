@@ -112,7 +112,7 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
             _user = user;
             var lol = `
             <div class="cerrar">
-            <ion-icon name="close-circle-outline"></ion-icon>
+            <ion-icon id="cerrar" name="close-circle-outline"></ion-icon>
             </div>
             <table id="tabla2">
             <thead>
@@ -221,15 +221,18 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
             </div>
             `
             mySection.innerHTML=lol;
+
+        const closer = document.querySelector('#cerrar');
+        closer.addEventListener('click',function(e){
+        e.preventDefault();
+        console.log(':D')
+        mySection.style.display="none";
+        });
+
         }).catch(error=> console.log(error));      
     }
 }))
-    const closer = document.querySelector('.cerrar');
-    closer.addEventListener('click', function(e){
-    e.preventDefault();
-    mySection.style.display="none";
-});
-}
+};
 
 /*
 
