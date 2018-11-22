@@ -54,6 +54,8 @@ const postulantSchema = mongoose.Schema({
             vespertino: Boolean
         }
     },
+    cv:{type: String},
+    ine:{type: String},
     created: {type:Date, default:Date.now}
 });
 

@@ -42,7 +42,7 @@ function pack(){
     
     var estudios = create.estudio.value;
 
-    var tatuajes = create.tatuaje.value;
+    var tatuaje = create.tatuaje.value;
 
     var empresa = create.empresa.value;
     var separacion = create.separacion.value;
@@ -56,7 +56,7 @@ function pack(){
     },{
         nombre: create.nombre2.value,
         numero: create.tel2.value,
-        ocupacion: create.ocupacion3.value,
+        ocupacion: create.ocupacion2.value,
     },{
         nombre: create.nombre3.value,
         numero: create.tel3.value,
@@ -68,32 +68,32 @@ function pack(){
 
     var disponibilidad = {
         Lunes: {
-            matutino: document.getElementsByName('lunesm')[0].value,
-            vespertino: document.getElementsByName('lunesv')[0].value
+            matutino: document.getElementsByName('lunesm')[0].value == "on" ? true : false, 
+            vespertino: document.getElementsByName('lunesv')[0].value == "on" ? true : false
         },
         Martes: {
-            matutino: document.getElementsByName('martesm')[0].value,
-            vespertino: document.getElementsByName('martesm')[0].value
+            matutino: document.getElementsByName('martesm')[0].value == "on" ? true : false,
+            vespertino: document.getElementsByName('martesm')[0].value == "on" ? true : false
         },
         Miercoles:{
-            matutino: document.getElementsByName('miercolesm')[0].value,
-            vespertino: document.getElementsByName('miercolesv')[0].value
+            matutino: document.getElementsByName('miercolesm')[0].value == "on" ? true : false,
+            vespertino: document.getElementsByName('miercolesv')[0].value == "on" ? true : false
         },
         Jueves:{
-            matutino: document.getElementsByName('juevesm')[0].value,
-            vespertino: document.getElementsByName('juevesv')[0].value
+            matutino: document.getElementsByName('juevesm')[0].value == "on" ? true : false,
+            vespertino: document.getElementsByName('juevesv')[0].value == "on" ? true : false
         },
         Viernes:{
-            matutino: document.getElementsByName('viernesm')[0].value,
-            vespertino: document.getElementsByName('viernesv')[0].value
+            matutino: document.getElementsByName('viernesm')[0].value == "on" ? true : false,
+            vespertino: document.getElementsByName('viernesv')[0].value == "on" ? true : false
         },
         Sabado:{
-            matutino: document.getElementsByName('sabadom')[0].value,
-            vespertino: document.getElementsByName('sabadov')[0].value
+            matutino: document.getElementsByName('sabadom')[0].value == "on" ? true : false,
+            vespertino: document.getElementsByName('sabadov')[0].value == "on" ? true : false
         },
         Domingo:{
-            matutino: document.getElementsByName('domingom')[0].value,
-            vespertino: document.getElementsByName('domingov')[0].value
+            matutino: document.getElementsByName('domingom')[0].value == "on" ? true : false,
+            vespertino: document.getElementsByName('domingov')[0].value == "on" ? true : false
         }
     }
 
@@ -115,7 +115,7 @@ function pack(){
             civil,
             hijos,
             estudios,
-            tatuajes,
+            tatuaje,
             empresa,
             separacion,
             puesto,

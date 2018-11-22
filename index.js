@@ -37,7 +37,7 @@ app.get('/postulantes/user/:id', function(req, res){
   
 //METHOD POST ONE POSTULANT
 app.post('/postulantes/users', function(req, res){
-  if(!req.body.nombre || !req.body.materno || !req.body.paterno || !req.body.calle || !req.body.colonia || !req.body.delegacion || !req.body.cp || !req.body.edad || !req.body.civil || !req.body.hijos || !req.body.estudios || !req.body.tatuajes || !req.body.empresa || !req.body.separacion || !req.body.puesto || !req.body.tiempo || !req.body.referencias || !req.body.exp_mostrador || !req.body.exp_atc || !req.body.disponibilidad){
+  if(!req.body.nombre || !req.body.materno || !req.body.paterno || !req.body.calle || !req.body.colonia || !req.body.delegacion || !req.body.cp || !req.body.edad || !req.body.civil || !req.body.hijos || !req.body.estudios || !req.body.tatuaje || !req.body.empresa || !req.body.separacion || !req.body.puesto || !req.body.tiempo || !req.body.referencias || !req.body.exp_mostrador || !req.body.exp_atc || !req.body.disponibilidad){
     return res.status(428).send('Precondition Required');
   }else{
     postulante.create({
@@ -52,7 +52,7 @@ app.post('/postulantes/users', function(req, res){
     civil: req.body.civil,
     hijos: req.body.hijos,
     estudios: req.body.estudios,
-    tatuajes: req.body.tatuajes,
+    tatuaje: req.body.tatuaje,
     empresa: req.body.empresa,
     separacion: req.body.separacion,
     puesto: req.body.puesto,

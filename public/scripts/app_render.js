@@ -35,8 +35,8 @@ function render(){
         <td>${user.civil}</td>
         <td>${user.hijos}</td>
         <td>${user.estudios}</td>
-        <td>${user.tatuajes}</td>
-        <td>${user.exp_ventas}</td>
+        <td>${user.tatuaje}</td>
+        <td>${user.exp_mostrador}</td>
         <td>${user.exp_atc}</td>
         <td><ion-icon data-userid2=${user._id} class="lupa" name="search">Más</ion-icon></td>
         <td><ion-icon data-userid=${user._id} id="bote" name="trash">Borrar</ion-icon></td>
@@ -150,74 +150,91 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
             <li>${user.referencias[2].ocupacion}</li>
             </ul>
             </td>
-        
-            <td>
-            <tr>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miercoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-            <th>Sábado</th>
-            <th>Domingo</th>
-            </tr>
+        </table>
+
+        <br>
+
+        <table id="tabla3">
+        <thead>
+        <tr>
+        <th>Disponibilidad de horario</th>
+        </tr>
+        </thead>
+
+        <tr>
+
+        <td>
+        <h2>Lunes</h2>
+        <ul>
+        <li>Matutino: ${user.disponibilidad.Lunes.matutino}</li>
+        <li>Vespertino: ${user.disponibilidad.Lunes.vespertino}</li>
+        </ul>
+        </td>
+
+        <td>
+        <h2>Martes</h2>
+        <ul>
+        <li>Matutino: ${user.disponibilidad.Martes.matutino}</li>
+        <li>Vespertino: ${user.disponibilidad.Martes.vespertino}</li>    
+        </ul>
+        </td>
+        </tr>
     
-            <tr>
-            <td>
-            <ul>
-            <li>Matutino: ${user.disponibilidad.Lunes[0]}</li>
-            <li>Vespertino: ${user.disponibilidad.Lunes[1]}</li>
-            </ul>
-            </td>
-            <td>
-            <ul>
-            <li>Matutino: ${user.disponibilidad.Martes[0]}</li>
-            <li>Vespertino: ${user.disponibilidad.Martes[1]}</li>
-            </ul>
-            </td>
-            <td>
-            <ul>
-            <li>Matutino: ${user.disponibilidad.Miercoles[0]}</li>
-            <li>Vespertino: ${user.disponibilidad.Miercoles[1]}</li>
-            </ul>
-            </td>
-            <td>
-            <ul>
-            <li>Matutino: ${user.disponibilidad.Jueves[0]}</li>
-            <li>Vespertino: ${user.disponibilidad.Jueves[1]}</li>
-            </ul>
-            </td>
-            <td>
-            <ul>
-            <li>Matutino: ${user.disponibilidad.Viernes[0]}</li>
-            <li>Vespertino: ${user.disponibilidad.Viernes[1]}</li>
-            </ul>
-            </td>
-            <td>
-            <ul>
-            <li>Matutino: ${user.disponibilidad.Sabado[0]}</li>
-            <li>Vespertino: ${user.disponibilidad.Sabado[1]}</li>
-            </ul>
-            </td>
-            <td>
-            <ul>
-            <li>Matutino: ${user.disponibilidad.Domingo[0]}</li>
-            <li>Vespertino: ${user.disponibilidad.Domingo[1]}</li>
-            </ul>
-            </td>
-            </tr>
-            </td>
-            </tr>
+        <td>
+        <h2>Miércoles</h2>
+        <ul>
+        <li>Matutino: ${user.disponibilidad.Miercoles.matutino}</li>
+        <li>Vespertino: ${user.disponibilidad.Miercoles.vespertino}</li>
+        </ul>
+        </td>
+        </tr>
+
+        <td>
+        <h2>Jueves</h2>
+        <ul>
+        <li>Matutino: ${user.disponibilidad.Jueves.matutino}</li>
+        <li>Vespertino: ${user.disponibilidad.Jueves.vespertino}</li>
+        </ul>
+        </td>
+        </tr>
+
+        <td>
+        <h2>Viernes</h2>
+        <ul>
+        <li>Matutino: ${user.disponibilidad.Viernes.matutino}</li>
+        <li>Vespertino: ${user.disponibilidad.Viernes.vespertino}</li>
+        </ul>
+        </td>
+        </tr>
+
+        <td>
+        <h2>Sábado</h2>
+        <ul>
+        <li>Matutino: ${user.disponibilidad.Sabado.matutino}</li>
+        <li>Vespertino: ${user.disponibilidad.Sabado.vespertino}</li>
+        </ul>
+        </td>
+        </tr>
+
+        <td>
+        <h2>Domingo</h2>
+        <ul>
+        <li>Matutino: ${user.disponibilidad.Domingo.matutino}</li>
+        <li>Vespertino: ${user.disponibilidad.Domingo.vespertino}</li>
+        </ul>
+        </td>
+        </tr>
+        
         </table>
         
             <div id="cv">
-            <script src="/js/pdfobject.js"></script>
-            <script>PDFObject.embed("/folder_name/${user.cv}", "#cv");</script>
+            <script src="./public/scripts/pdfobject.js"></script>
+            <script>PDFObject.embed("../pdf/hp_laserjet_1010_guia_del_usuario.pdf", "#cv");</script>
             </div>
         
             <div id="ine">
-            <script src="/js/pdfobject.js"></script>
-            <script>PDFObject.embed("/folder_name/${user.ine}", "#ine");</script>
+            <script src="./public/scripts/pdfobject.js"></script>
+            <script>PDFObject.embed("../pdf/${user.ine}", "#ine");</script>
             </div>
             `
             mySection.innerHTML=lol;
