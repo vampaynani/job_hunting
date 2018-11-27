@@ -68,32 +68,32 @@ function pack(){
 
     var disponibilidad = {
         Lunes: {
-            matutino: document.getElementsByName('lunesm')[0].value == "on" ? true : false, 
-            vespertino: document.getElementsByName('lunesv')[0].value == "on" ? true : false
+            matutino: create.lunesm.value == 'on' ? true : false, 
+            vespertino: create.lunesv.value == 'on' ? true : false
         },
         Martes: {
-            matutino: document.getElementsByName('martesm')[0].value == "on" ? true : false,
-            vespertino: document.getElementsByName('martesm')[0].value == "on" ? true : false
+            matutino: create.martesm.value == 'on' ? true : false,
+            vespertino: create.martesm.value == 'on' ? true : false
         },
         Miercoles:{
-            matutino: document.getElementsByName('miercolesm')[0].value == "on" ? true : false,
-            vespertino: document.getElementsByName('miercolesv')[0].value == "on" ? true : false
+            matutino: create.miercolesm.value == 'on' ? true : false,
+            vespertino: create.miercolesv.value == 'on' ? true : false
         },
         Jueves:{
-            matutino: document.getElementsByName('juevesm')[0].value == "on" ? true : false,
-            vespertino: document.getElementsByName('juevesv')[0].value == "on" ? true : false
+            matutino: create.juevesm.value == 'on' ? true : false,
+            vespertino: create.juevesv.value == 'on' ? true : false
         },
         Viernes:{
-            matutino: document.getElementsByName('viernesm')[0].value == "on" ? true : false,
-            vespertino: document.getElementsByName('viernesv')[0].value == "on" ? true : false
+            matutino: create.viernesm.value == 'on' ? true : false,
+            vespertino: create.viernesv.value == 'on' ? true : false
         },
         Sabado:{
-            matutino: document.getElementsByName('sabadom')[0].value == "on" ? true : false,
-            vespertino: document.getElementsByName('sabadov')[0].value == "on" ? true : false
+            matutino: create.sabadom.value == 'on' ? true : false,
+            vespertino: create.sabadov.value == 'on' ? true : false
         },
         Domingo:{
-            matutino: document.getElementsByName('domingom')[0].value == "on" ? true : false,
-            vespertino: document.getElementsByName('domingov')[0].value == "on" ? true : false
+            matutino: create.domingom.value == 'on' ? true : false,
+            vespertino: create.domingov.value == 'on' ? true : false
         }
     }
 

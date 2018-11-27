@@ -114,119 +114,107 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
             <div class="cerrar">
             <ion-icon id="cerrar" name="close-circle-outline"></ion-icon>
             </div>
-            <table id="tabla2">
-            <thead>
-            <tr>
-            <th>Ultima Empresa</th>
-            <th>Puesto</th>
-            <th>Tiempo Laborado</th>
-            <th>Motivo de Separación</th>
-            <th>Nombre Referencia</th>
-            <th>Horario Disponible</th>
-            </tr>
-            </thead>
-            <tr>
-            <td>${user.empresa}</td>
-            <td>${user.separacion}</td>
-            <td>${user.puesto}</td>
-            <td>${user.tiempo}</td>
-            <td>
+            <div id=con_tenedor>
+                <table id="tabla2">
+                <thead>
+                <tr>
+                <th>Ultima Empresa</th>
+                <th>Puesto</th>
+                <th>Tiempo Laborado</th>
+                <th>Motivo de Separación</th>
+                <th>Nombre Referencia</th>
+                </tr>
+                </thead>
+                <tr>
+                <td>${user.empresa}</td>
+                <td>${user.separacion}</td>
+                <td>${user.puesto}</td>
+                <td>${user.tiempo}</td>
+                <td>
+                
+                <ul>
+                <h3>${user.referencias[0].nombre}</h3>
+                <li>${user.referencias[0].numero}</li>
+                <li>${user.referencias[0].ocupacion}</li>
+                </ul>
+                <br>
+                <ul>
+                <h3>${user.referencias[1].nombre}</h3>
+                <li>${user.referencias[1].numero}</li>
+                <li>${user.referencias[1].ocupacion}</li>
+                </ul>
+                <br>
+                <ul>
+                <h3>${user.referencias[2].nombre}</h3>
+                <li>${user.referencias[2].numero}</li>
+                <li>${user.referencias[2].ocupacion}</li>
+                </ul>
+                </td>
+            </table>
+
+            <h1 class="disp">Disponibilidad de horario</h1>
+
+
+            <table id="tabla3">
+
+                <td .dia>
+                    <h2>Lunes</h2>
+                    <ul>
+                        <li>Matutino: ${user.disponibilidad.Lunes.matutino}</li>
+                        <li>Vespertino: ${user.disponibilidad.Lunes.vespertino}</li>
+                    </ul>
+                </td>
+
+                <td .dia>
+                    <h2>Martes</h2>
+                    <ul>
+                        <li>Matutino: ${user.disponibilidad.Martes.matutino}</li>
+                        <li>Vespertino: ${user.disponibilidad.Martes.vespertino}</li>    
+                    </ul>
+                </td>
+        
+                <td .dia>
+                    <h2>Miércoles</h2>
+                    <ul>
+                        <li>Matutino: ${user.disponibilidad.Miercoles.matutino}</li>
+                        <li>Vespertino: ${user.disponibilidad.Miercoles.vespertino}</li>
+                    </ul>
+                </td>
+
+                <td .dia>
+                    <h2>Jueves</h2>
+                    <ul>
+                        <li>Matutino: ${user.disponibilidad.Jueves.matutino}</li>
+                        <li>Vespertino: ${user.disponibilidad.Jueves.vespertino}</li>
+                    </ul>
+                </td>
+
+                <td .dia>
+                    <h2>Viernes</h2>
+                    <ul>
+                        <li>Matutino: ${user.disponibilidad.Viernes.matutino}</li>
+                        <li>Vespertino: ${user.disponibilidad.Viernes.vespertino}</li>
+                    </ul>
+                </td>
+
+                <td .dia>
+                    <h2>Sábado</h2>
+                    <ul>
+                        <li>Matutino: ${user.disponibilidad.Sabado.matutino}</li>
+                        <li>Vespertino: ${user.disponibilidad.Sabado.vespertino}</li>
+                    </ul>
+                </td>
+
+                <td .dia>
+                    <h2>Domingo</h2>
+                    <ul>
+                        <li>Matutino: ${user.disponibilidad.Domingo.matutino}</li>
+                        <li>Vespertino: ${user.disponibilidad.Domingo.vespertino}</li>
+                    </ul>
+                </td>
             
-            <ul>
-            <h3>${user.referencias[0].nombre}</h3>
-            <li>${user.referencias[0].numero}</li>
-            <li>${user.referencias[0].ocupacion}</li>
-            </ul>
-            <br>
-            <ul>
-            <h3>${user.referencias[1].nombre}</h3>
-            <li>${user.referencias[1].numero}</li>
-            <li>${user.referencias[1].ocupacion}</li>
-            </ul>
-            <br>
-            <ul>
-            <h3>${user.referencias[2].nombre}</h3>
-            <li>${user.referencias[2].numero}</li>
-            <li>${user.referencias[2].ocupacion}</li>
-            </ul>
-            </td>
-        </table>
-
-        <br>
-
-        <table id="tabla3">
-        <thead>
-        <tr>
-        <th>Disponibilidad de horario</th>
-        </tr>
-        </thead>
-
-        <tr>
-
-        <td>
-        <h2>Lunes</h2>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Lunes.matutino}</li>
-        <li>Vespertino: ${user.disponibilidad.Lunes.vespertino}</li>
-        </ul>
-        </td>
-
-        <td>
-        <h2>Martes</h2>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Martes.matutino}</li>
-        <li>Vespertino: ${user.disponibilidad.Martes.vespertino}</li>    
-        </ul>
-        </td>
-        </tr>
-    
-        <td>
-        <h2>Miércoles</h2>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Miercoles.matutino}</li>
-        <li>Vespertino: ${user.disponibilidad.Miercoles.vespertino}</li>
-        </ul>
-        </td>
-        </tr>
-
-        <td>
-        <h2>Jueves</h2>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Jueves.matutino}</li>
-        <li>Vespertino: ${user.disponibilidad.Jueves.vespertino}</li>
-        </ul>
-        </td>
-        </tr>
-
-        <td>
-        <h2>Viernes</h2>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Viernes.matutino}</li>
-        <li>Vespertino: ${user.disponibilidad.Viernes.vespertino}</li>
-        </ul>
-        </td>
-        </tr>
-
-        <td>
-        <h2>Sábado</h2>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Sabado.matutino}</li>
-        <li>Vespertino: ${user.disponibilidad.Sabado.vespertino}</li>
-        </ul>
-        </td>
-        </tr>
-
-        <td>
-        <h2>Domingo</h2>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Domingo.matutino}</li>
-        <li>Vespertino: ${user.disponibilidad.Domingo.vespertino}</li>
-        </ul>
-        </td>
-        </tr>
-        
-        </table>
-        
+            </table>
+        </div>
             <div id="cv">
             <script src="./public/scripts/pdfobject.js"></script>
             <script>PDFObject.embed("../pdf/hp_laserjet_1010_guia_del_usuario.pdf", "#cv");</script>
