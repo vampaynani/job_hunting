@@ -68,32 +68,32 @@ function pack(){
 
     var disponibilidad = {
         Lunes: {
-            matutino: create.lunesm.value == 'on' ? true : false, 
-            vespertino: create.lunesv.value == 'on' ? true : false
+            matutino: create.lunesm.checked,
+            vespertino: create.lunesv.checked
         },
         Martes: {
-            matutino: create.martesm.value == 'on' ? true : false,
-            vespertino: create.martesm.value == 'on' ? true : false
+            matutino: create.martesm.checked,
+            vespertino: create.martesm.checked
         },
         Miercoles:{
-            matutino: create.miercolesm.value == 'on' ? true : false,
-            vespertino: create.miercolesv.value == 'on' ? true : false
+            matutino: create.miercolesm.checked,
+            vespertino: create.miercolesv.checked
         },
         Jueves:{
-            matutino: create.juevesm.value == 'on' ? true : false,
-            vespertino: create.juevesv.value == 'on' ? true : false
+            matutino: create.juevesm.checked,
+            vespertino: create.juevesv.checked
         },
         Viernes:{
-            matutino: create.viernesm.value == 'on' ? true : false,
-            vespertino: create.viernesv.value == 'on' ? true : false
+            matutino: create.viernesm.checked,
+            vespertino: create.viernesv.checked
         },
         Sabado:{
-            matutino: create.sabadom.value == 'on' ? true : false,
-            vespertino: create.sabadov.value == 'on' ? true : false
+            matutino: create.sabadom.checked,
+            vespertino: create.sabadov.checked
         },
         Domingo:{
-            matutino: create.domingom.value == 'on' ? true : false,
-            vespertino: create.domingov.value == 'on' ? true : false
+            matutino: create.domingom.checked,
+            vespertino: create.domingov.checked
         }
     }
 
