@@ -8,6 +8,28 @@ function initializate(){
     var bloque1 = document.querySelector("form");
     var bloque2 = document.querySelector("#end");
     var send = document.querySelector("#send");
+    var cv = document.querySelector("#cv");
+    var cvFilename = document.querySelector("#cv_filename");
+
+    cv.addEventListener('change', function(e){
+        let file = e.currentTarget.files[0]
+        let fd = new FormData();
+        fd.append('file', file);
+        fetch('/fileupload', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json'
+            },
+            body: fd
+        })
+        .then(response =>{
+            return response.json();
+        })
+        .then(response =>{
+            cvFilename.value = response.filename;
+        })
+
+    });
 
     send.addEventListener('click',function(e){
         e.preventDefault(e);
@@ -97,7 +119,7 @@ function pack(){
         }
     }
 
-    fetch('http://localhost:3000/postulantes/users', {
+    fetch('/postulantes/users', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
