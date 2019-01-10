@@ -5,11 +5,33 @@ window.onload=(function(){
 })();
 
 function initializate(){
+
     var bloque1 = document.querySelector("form");
     var bloque2 = document.querySelector("#end");
     var send = document.querySelector("#send");
     var cv = document.querySelector("#cv");
     var cvFilename = document.querySelector("#cv_filename");
+
+    var ine = document.querySelector('#ine');
+    var ineFilename = document.querySelector('#ine_filename');
+
+    ine.addEventListener('change', (e)=>{
+        let file = e.currentTarget.files[0]
+        let fd = new FormData();
+        fd.append('file', file);
+
+        fetch('/fileupload', {
+            method: 'POST',
+            headers:{
+                'Accept': 'application/json'
+            },
+            body: fd
+        }).then(response=>{
+            return response.json();
+        }).then(response =>{
+            ineFilename.value = response.filename;
+        })
+    });
 
     cv.addEventListener('change', function(e){
         let file = e.currentTarget.files[0]
@@ -39,8 +61,8 @@ function initializate(){
         TweenLite.to(bloque1,.5,{top: "-100%", display: "none"});
         TweenLite.set(bloque2,{top: "-100%", display: "none", delay: .5});
         TweenLite.to(bloque2,.5,{top:"0%", display: "block", delay: 1.5});
-
-        pack();
+        
+        pack(doc1 = cvFilename.value, doc2 = ineFilename.value);
     });
 }
 
@@ -119,6 +141,10 @@ function pack(){
         }
     }
 
+    var _doc1 = doc1;
+
+    var _doc2 = doc2;
+
     fetch('/postulantes/users', {
         method: 'POST',
         headers: {
@@ -146,15 +172,17 @@ function pack(){
             exp_mostrador,
             exp_atc,
             disponibilidad,
+            _doc1,
+            _doc2
         })
     })
     .then(response =>{
         if(!response.ok){
+            console.log('fuck!');
             return Promise.reject(response.json());
-            console.log('fuck!')
         }
+        console.log('hurray!');
         return response.json();
-        console.log('hurray!')
     })
     .then(user =>{
         create.reset();

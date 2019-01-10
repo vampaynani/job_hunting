@@ -217,12 +217,14 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
         </div>
             <div id="cv">
             <script src="./public/scripts/pdfobject.js"></script>
-            <script>PDFObject.embed("../pdf/hp_laserjet_1010_guia_del_usuario.pdf", "#cv");</script>
+            <script>PDFObject.embed("./uploads/UmVhZG1lLnBkZg==-1547087341210.pdf", "#cv");</script>
+            <style>#cv{ height: 30rem; border: 1rem solid rgba(0,0,0,.1); }</style>
             </div>
         
             <div id="ine">
             <script src="./public/scripts/pdfobject.js"></script>
-            <script>PDFObject.embed("../pdf/${user.ine}", "#ine");</script>
+            <script>PDFObject.embed("./uploads/UmVhZG1lLnBkZg==-1547087341210.pdf", "#ine");</script>
+            <style>#ine{ height: 30rem; border: 1rem solid rgba(0,0,0,.1); }</style>
             </div>
             `
             mySection.innerHTML=lol;
