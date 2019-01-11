@@ -106,14 +106,14 @@ tr:hover td{
 #cv{
     width: 50%;
     height: 650px;;
-    border: red 1px solid;
+    border:black 1px solid;
     float: left;
     margin-top: 5%;
 }
 #ine{
     width: 50%;
     height: 650px;;
-    border: red 1px solid;
+    border: black 1px solid;
     float: left;
     margin-top: 5%;
 }

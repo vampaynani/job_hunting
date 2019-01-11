@@ -5,6 +5,7 @@ const mySection = document.querySelector('#hide');
 
 window.onload=(function(){
     initializer();
+
 });
 
 //to get all clients
@@ -110,6 +111,7 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
             return response.json();            
         }).then(user =>{
             _user = user;
+
             var lol = `
             <section id="fst_cont">
             <div class="cerrar">
@@ -216,16 +218,15 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
             
             </table>
         </div>
-
-            <div id="cv">
-            <script src="./scripts/pdfobject.js"></script>
-            <script>PDFObject.embed("./uploads/${user.cv}", "#cv");</script>
-            </div>
         
-            <div id="ine">
-            <script src="./scripts/pdfobject.js"></script>
-            <script>PDFObject.embed("./uploads/${user.ine}", "#ine");</script>
-            </div>
+        <div id="cv">
+        <embed class="cv" src="./uploads/${user.cv}" type="application/pdf" style="overflow: auto; width: 100%; height: 100%;">
+        </div>
+
+        <div id="ine">
+        <embed class="cv" src="./uploads/${user.ine}" type="application/pdf" style="overflow: auto; width: 100%; height: 100%;">
+        </div>
+
             </section>
             `
             mySection.innerHTML=lol;
@@ -241,5 +242,3 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
     }
 }))
 };
-
-const route = require('../uploads/')
