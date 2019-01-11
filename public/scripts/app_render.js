@@ -111,6 +111,7 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
         }).then(user =>{
             _user = user;
             var lol = `
+            <section id="fst_cont">
             <div class="cerrar">
             <ion-icon id="cerrar" name="close-circle-outline"></ion-icon>
             </div>
@@ -215,17 +216,17 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
             
             </table>
         </div>
+
             <div id="cv">
-            <script src="./public/scripts/pdfobject.js"></script>
-            <script>PDFObject.embed("./uploads/UmVhZG1lLnBkZg==-1547087341210.pdf", "#cv");</script>
-            <style>#cv{ height: 30rem; border: 1rem solid rgba(0,0,0,.1); }</style>
+            <script src="./scripts/pdfobject.js"></script>
+            <script>PDFObject.embed("./uploads/${user.cv}", "#cv");</script>
             </div>
         
             <div id="ine">
-            <script src="./public/scripts/pdfobject.js"></script>
-            <script>PDFObject.embed("./uploads/UmVhZG1lLnBkZg==-1547087341210.pdf", "#ine");</script>
-            <style>#ine{ height: 30rem; border: 1rem solid rgba(0,0,0,.1); }</style>
+            <script src="./scripts/pdfobject.js"></script>
+            <script>PDFObject.embed("./uploads/${user.ine}", "#ine");</script>
             </div>
+            </section>
             `
             mySection.innerHTML=lol;
 
@@ -241,123 +242,4 @@ opnr.forEach(search=> search.addEventListener('click', function(e){
 }))
 };
 
-/*
-
-function sectionRender(){
-    var userDiv = _user.map(user=>{ //Problema aquí, no sé que sea.
-        return `
-        <div class="cerrar">
-        <ion-icon name="close-circle-outline"></ion-icon>
-        </div>
-        <table id="tabla2">
-        <thead>
-        <tr>
-        <th>Ultima Empresa</th>
-        <th>Puesto</th>
-        <th>Tiempo Laborado</th>
-        <th>Motivo de Separación</th>
-        <th>Nombre Referencia</th>
-        <th>Horario Disponible</th>
-        </tr>
-        </thead>
-        <tr>
-        <td>${user.empresa}</td>
-        <td>${user.separacion}</td>
-        <td>${user.puesto}</td>
-        <td>${user.tiempo}</td>
-        <td>
-        
-        <ul>
-        <h3>${user.referencias[0].nombre}</h3>
-        <li>${user.referencias[0].numero}</li>
-        <li>${user.referencias[0].ocupacion}</li>
-        </ul>
-        <br>
-        <ul>
-        <h3>${user.referencias[1].nombre}</h3>
-        <li>${user.referencias[1].numero}</li>
-        <li>${user.referencias[1].ocupacion}</li>
-        </ul>
-        <br>
-        <ul>
-        <h3>${user.referencias[2].nombre}</h3>
-        <li>${user.referencias[2].numero}</li>
-        <li>${user.referencias[2].ocupacion}</li>
-        </ul>
-        </td>
-    
-        <td>
-        <tr>
-        <th>Lunes</th>
-        <th>Martes</th>
-        <th>Miercoles</th>
-        <th>Jueves</th>
-        <th>Viernes</th>
-        <th>Sábado</th>
-        <th>Domingo</th>
-        </tr>
-
-        <tr>
-        <td>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Lunes[0]}</li>
-        <li>Vespertino: ${user.disponibilidad.Lunes[1]}</li>
-        </ul>
-        </td>
-        <td>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Martes[0]}</li>
-        <li>Vespertino: ${user.disponibilidad.Martes[1]}</li>
-        </ul>
-        </td>
-        <td>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Miercoles[0]}</li>
-        <li>Vespertino: ${user.disponibilidad.Miercoles[1]}</li>
-        </ul>
-        </td>
-        <td>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Jueves[0]}</li>
-        <li>Vespertino: ${user.disponibilidad.Jueves[1]}</li>
-        </ul>
-        </td>
-        <td>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Viernes[0]}</li>
-        <li>Vespertino: ${user.disponibilidad.Viernes[1]}</li>
-        </ul>
-        </td>
-        <td>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Sabado[0]}</li>
-        <li>Vespertino: ${user.disponibilidad.Sabado[1]}</li>
-        </ul>
-        </td>
-        <td>
-        <ul>
-        <li>Matutino: ${user.disponibilidad.Domingo[0]}</li>
-        <li>Vespertino: ${user.disponibilidad.Domingo[1]}</li>
-        </ul>
-        </td>
-        </tr>
-        </td>
-        </tr>
-    </table>
-    
-        <div id="cv">
-        <script src="/js/pdfobject.js"></script>
-        <script>PDFObject.embed("/folder_name/${user.cv}", "#cv");</script>
-        </div>
-    
-        <div id="ine">
-        <script src="/js/pdfobject.js"></script>
-        <script>PDFObject.embed("/folder_name/${user.ine}", "#ine");</script>
-        </div>
-        `   
-        });
-        var container = document.querySelector('#container');
-        container.innerHTML = userDiv.join('');
-}
-
-*/
+const route = require('../uploads/')

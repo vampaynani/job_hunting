@@ -61,8 +61,8 @@ app.post('/postulantes/users', function(req, res){
     exp_mostrador: req.body.exp_mostrador,
     exp_atc: req.body.exp_atc,
     disponibilidad: req.body.disponibilidad,
-    ine: req.body.doc1,
-    cv: req.body.doc2
+    ine: req.body._doc1,
+    cv: req.body._doc2
   }).then(function(user){
     res.status(201).json(user);
   })

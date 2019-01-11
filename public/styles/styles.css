@@ -58,6 +58,8 @@ tr:hover td{
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, .8);
+    overflow: auto;
+    padding-top: 45%;
 }
 
 #tabla2{
@@ -81,12 +83,40 @@ tr:hover td{
 }
 
 /*
+#fst_cont{
+    width: 100%;
+    background-color: black;
+}
+
+#con_tenedor{
+    width: 99%;
+    border: 1px red solid;
+    color: wheat;
+}
+*/
+
+/*
 #con_tenedor{
     height: 100vh;
     overflow: auto;
     background-color: #fff;
 }
 */
+
+#cv{
+    width: 50%;
+    height: 650px;;
+    border: red 1px solid;
+    float: left;
+    margin-top: 5%;
+}
+#ine{
+    width: 50%;
+    height: 650px;;
+    border: red 1px solid;
+    float: left;
+    margin-top: 5%;
+}
 
 #con_tenedor .disp{
     width: 100%;
